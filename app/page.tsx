@@ -1,65 +1,38 @@
-import Image from "next/image";
+import ToggleThemeButton from '@/components/toggle-theme-button';
+import { Button } from '@/components/ui/button';
+import { GlassWater } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main>
+      <nav className='flex items-center justify-between p-4 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 border-b border-border sticky top-0 z-50 px-20'>
+        <div className='flex justify-between items-center gap-2'>
+          <GlassWater size={40}/>
+          <h1 className='text-2xl'>ShiftFlow</h1>
+        </div>
+      </nav>
+
+      <header className='mx-20 mt-10 flex'>
+        <div>
+          <h1 className='text-6xl mt-10 animate-enter-left'>
+            Optimize your shipping.<br />
+            Multiply your profits.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className='mt-2 animate-enter-left'>
+            Connect your e-commerce to the AI platform that automates inventory,<br />
+            predicts demand, and cuts shipping costs by up to 35%.
           </p>
+
+          <Button className="mt-10 animate-enter-left" size="lg">Request Free Demo</Button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        <svg className='size-100 ml-auto fill-accent-foreground animate-enter-right' fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>ice-cube</title> <path d="M29.443 7.066l-12.53-4.92c-1.619-0.667-2.501-0.576-3.937-0.030l-9.812 3.557c-1.309 0.477-1.347 0.738-1.394 2.076l-0.462 14.604c-0.075 1.717-0.041 2.071 1.451 2.718l11.591 5.080c1.207 0.517 1.992 0.478 2.821 0.201l11.353-3.529c1.37-0.455 1.562-0.599 1.614-2.298l0.48-15.611c0.041-1.084-0.355-1.541-1.173-1.848zM15.857 22.295c-0.486 6.852-0.549 6.855-8.016 3.699-4.564-1.928-5.417-2.549-5.316-5.551l0.342-10.167c0.079-2.353 0.2-2.558 4.818-0.501 8.793 3.918 8.769 4.11 8.173 12.52zM14.008 11.253l-6.928-3.032c-2.157-0.944-2.788-1.715 1.114-3.127 6.733-2.437 6.766-2.433 12.216-0.315 5.962 2.316 8.219 3.357 4.349 4.863-4.618 1.797-7.998 2.815-10.75 1.611zM29.199 16.857c-0.257 8.432-0.564 8.747-7.511 10.84-4.394 1.323-5.085 1.598-4.928-0.751l0.686-10.244c0.201-2.997 0.473-3.212 5.915-5.234 5.957-2.212 6.056-1.778 5.838 5.389zM9.567 14.705c-0.309 3.719-4.485 0.826-5.977 4.157-1.989 4.44 3.685 6.128 7.201 7.588 3.050 1.266 4.282-0.304 4.404-4.124 0.261-8.206-5.251-12.161-5.628-7.621v0zM20.453 26.562c5.423 0.288 8.517-3.586 7.941-11.59-0.272-3.776-4.34-3.544-4.024 0.173 0.148 1.735-1.332 5.062-3.427 5.348-4.12 0.561-4.3 5.867-0.49 6.070l-0-0zM22.165 13.228c-4.665 0.262-4.442 3.129-3.024 4.928 3.294 4.18 7.911-5.202 3.024-4.928zM18.113 10.967c9.059-1.773 8.152-4.539 0.787-5.516-6.774-0.899-7.122 6.755-0.787 5.516z"></path> </g></svg>
+      </header>
+
+      {/* Features Section */}
+      <section>
+        
+      </section>
+    </main>
   );
 }
