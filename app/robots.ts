@@ -12,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
         '/admin/',        // Bloqueia páginas de administração
       ],
     },
-    // Altere para o domínio real do seu projeto quando fizer o deploy
-    sitemap: 'https://shiftflow.com/sitemap.xml', 
+
+    sitemap: 'https://ldpageone.vercel.app/sitemap.xml', 
   }
 }
