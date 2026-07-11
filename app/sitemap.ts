@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://shiftflow.com', // URL da sua Home
+      url: 'https://ldpageone.vercel.app', // URL da sua Home
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
