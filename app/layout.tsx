@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ShitFlow",
   description: "Example landing page",
+  verification: {
+    google: "Kx_dM_wDfLkYBYkeLud62qgKJT13Q7HhWVNFmG4E8As"
+  }
 };
 
 export default function RootLayout({
